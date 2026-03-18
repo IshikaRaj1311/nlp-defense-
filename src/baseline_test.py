@@ -28,4 +28,10 @@ if __name__ == "__main__":
     df = pd.read_csv("data/adversarial_prompts.csv")
     results = evaluate(df)
     print(results.groupby("type")["similarity"].mean())
-results.to_csv("data/baseline_results.csv", index=False)
+    results.to_csv("data/baseline_results.csv", index=False)
+
+    summary = results.groupby("type")["similarity"].mean().reset_index()
+    summary.columns = ["type", "similarity"]
+
+    summary.to_csv("data/baseline_summary.csv", index=False)
+    print("Saved: data/baseline_summary.csv")

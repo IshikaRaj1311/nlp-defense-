@@ -1,0 +1,5 @@
+type,similarity_before,similarity_after,improvement
+emoji_insertion,0.6428,0.8373,0.1944
+emoji_replacement,0.6889,0.7192,0.0302
+unicode,0.5876,1.0,0.4124
+whitespace,0.4198,0.4198,-0.0
